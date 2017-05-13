@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go Weather API DEMO</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet"> 
+    <link rel="stylesheet" href="src/css/weather-icons.min.css">
+    <link rel="stylesheet" href="src/css/weather-icons-wind.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <weather></weather>
+    <!-- <weather></weather> -->
+    <script src="https://cdn.rawgit.com/github/fetch/master/fetch.js"></script>
+    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="riot/tag" src="./weather.tag"></script>
+    <script type="riot/tag" src="./current.tag"></script>
+    <!-- // <script type="riot/tag" src="./other-days.tag"></script> -->
+    <script type="text/javascript">
+
+    function debounce(func, wait, immediate) {
+        var timeout
+        return function() {
+            var context = this,
+                args = arguments
+            var later = function() {
+                timeout = null
+                if (!immediate) func.apply(context, args)
+            }
+            var callNow = immediate && !timeout
+            clearTimeout(timeout)
+            timeout = setTimeout(later, wait)
+            if (callNow) func.apply(context, args)
+        }
+    }
+
+    riot.mount('*')
+    </script>
+</body>
+
+</html>
