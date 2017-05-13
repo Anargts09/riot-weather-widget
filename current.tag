@@ -28,7 +28,7 @@
 	<script>
 		var self = this;
 	  	getCurrentWeather = function() {
-	    	fetch('http://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&units=metric&appid=fdd0e62073750d3d83317adbdc2b2230')
+	    	fetch('https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&units=metric&appid=fdd0e62073750d3d83317adbdc2b2230')
 	    	.then(function(res) {
 	        	return res.json();
 	      	})
