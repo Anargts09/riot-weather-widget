@@ -1,14 +1,7 @@
 <weather>
 	<current></current>
-	<!-- <other-days></other-days> -->
+	<other-days></other-days>
 	
-	<script>
-		var self = this;
-		this.on('mount', function(){
-			getLocalJson();
-		})
-
-	</script>
   	<style>
 	    :scope {
 	      	position: absolute;
@@ -24,7 +17,7 @@
 			text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25); 
 			overflow: hidden;
 			background: #5c779e url("src/img/bg.jpg") no-repeat scroll 0 0 / cover ;
-			padding: 24px 17px;
+			padding: 24px 0;
 			box-sizing: border-box;
 			font-size: 22px;
 	    }
@@ -42,5 +35,6 @@
 	    	float: left;
 	    }
   	</style>
+
 
 </weather>

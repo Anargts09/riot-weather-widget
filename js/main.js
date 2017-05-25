@@ -1,4 +1,6 @@
 var weatherIcons;
+var cityNames;
+var selected_c = 26;
 function getLocalJson(){
 	fetch('src/icons.json').then(function(res) {
   		return res.json();
@@ -7,10 +9,21 @@ function getLocalJson(){
   		weatherIcons = data;
   		riot.mixin('weatherIcons', {
 		    bodyMixin: weatherIcons
-		});
+		  });
   	})
 }
 
+function getCitiesJson(){
+  fetch('src/cities.json').then(function(res) {
+      return res.json();
+    })
+    .then(function(data) {
+      cityNames = data;
+      riot.mixin('cityNames', {
+        bodyMixin: cityNames
+      });
+    })
+}
 function dayConverter(UNIX_timestamp){
   	var a = new Date(UNIX_timestamp * 1000);
   	var getDay = ['Ням','Даваа','Мягмар','Лхагва','Пүрэв','Баасан','Бямба'];

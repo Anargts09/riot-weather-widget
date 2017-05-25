@@ -12,14 +12,17 @@
 </head>
 
 <body>
-    <weather></weather>
+    <app></app>
     <!-- <weather></weather> -->
     <script src="https://cdn.rawgit.com/github/fetch/master/fetch.js"></script>
     <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="riot/tag" src="./app.tag"></script>
     <script type="riot/tag" src="./weather.tag"></script>
     <script type="riot/tag" src="./current.tag"></script>
-    <!-- // <script type="riot/tag" src="./other-days.tag"></script> -->
+    <script type="riot/tag" src="./other-days.tag"></script>
+    <script type="riot/tag" src="./single-day.tag"></script>
+    <script type="riot/tag" src="./searchCity.tag"></script>
     <script type="text/javascript">
 
     function debounce(func, wait, immediate) {

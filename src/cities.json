@@ -1,0 +1,24 @@
+{
+    "Cities": {
+        "0": {"id": 26, "mn_text": "Улаанбаатар",  "text": "Ulaanbaatar"},
+        "1": {"id": 16, "mn_text": "Эрдэнэт",  "text": "Erdenet"},
+        "2": {"id": 15, "mn_text": "Булган",  "text": "Bulgan"},
+        "3": {"id": 1, "mn_text": "Улаангом",  "text": "Ulaangom"},
+        "4": {"id": 10, "mn_text": "Хатгал",  "text": "Hovd"},
+        "5": {"id": 9, "mn_text": "Баруун-Урт",  "text": "Baruun-Urt"},
+        "6": {"id": 19, "mn_text": "Зуунмод",  "text": "Zuunmod"},
+        "7": {"id": 17, "mn_text": "Сүхбаатар",  "text": "Suhbaatar"},
+        "8": {"id": 0, "mn_text": "Өлгий",  "text": "Oelgiy"},
+        "9": {"id": 11, "mn_text": "Мөрөн",  "text": "Murun-kuren"},
+        "10": {"id": 23, "mn_text": "Мандалговь",  "text": "Mandalgovi"},
+        "11": {"id": 2, "mn_text": "Ховд",  "text": "Hovd"},
+        "12": {"id": 18, "mn_text": "Дархан",  "text": "Darhan"},
+        "13": {"id": 21, "mn_text": "Даланзадгад", "text": "Dalandzadgad"},
+        "14": {"id": 24, "mn_text": "Сайншанд",  "text": "Saynshand"},
+        "15": {"id": 6, "mn_text": "Баянхонгор",  "text": "Bayanhongor"},
+        "16": {"id": 3, "mn_text": "Тосонцэнгэл",  "text": "Tosontsengel"},
+        "17": {"id": 12, "mn_text": "Цэцэрлэг",  "text": "Tsetserleg"},
+        "18": {"id": 20, "mn_text": "Чойр",  "text": "Choyr"},
+        "19": {"id": 14, "mn_text": "Хархорин",  "text": "Kharkhorin"}
+    }
+}
