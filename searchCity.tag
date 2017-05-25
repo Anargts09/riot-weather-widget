@@ -6,7 +6,7 @@
     </select>
       
     <div if={ isLoading } class='loader'>
-      <img src='http://samherbert.net/svg-loaders/svg-loaders/puff.svg' />       
+      <img src='//samherbert.net/svg-loaders/svg-loaders/puff.svg' />       
     </div>
       
     <p class='error' if={ error }>{ error }</p>
