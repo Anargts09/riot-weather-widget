@@ -1,23 +1,54 @@
-<current>
- 
+<other-days>
+	<ul>
+		<single-day each={ item, index in items } no-reorder></single-day>
+	</ul>
+	<script>
+		var self = this;
+		var weatherdatas;
+		var old_id = selected_c;
+	  	getOtherWeather = function() {
+	    	fetch('https://weather-api.now.sh/api/v1/weather')
+	    	.then(function(res) {
+	        	return res.json();
+	      	})
+      		.then(function(data) {
+		        if (data) {
+		        	weatherdatas = data['Cities'];
+		        	self.items = weatherdatas[selected_c].Weathers;
+			        self.update();
+		        }
+	      	})
+	  	};
+	  	changeCity = function(city) {
+	  		if(weatherdatas){
+		  		self.items = weatherdatas[city].Weathers;
+	  			self.update();
+	  		}
+	  	};
+		this.on('mount', function(){
+			getOtherWeather();
+		})
+		this.on('updated', function(){
+			if(old_id != selected_c){
+				old_id = selected_c;
+				changeCity(selected_c);
+			}else{
+				return;
+			}
+		})
+	</script>
   	<style>
 	  	:scope{
-	  		height: 127px;
-	  		background: rgba(22,32,84,0.65);
-	  	};
-	    .temp{
-	    	font-size: 92px;
-	    	color: #FFF;
-	    	text-shadow: 0px 3px 4px rgba(121, 23, 11, 0.37); 
-	    	font-weight: 500;
-	    	line-height: 0.5;
-	    	margin: 0 0 20px;
-	    }
-	    .iconWi{
-	    	margin: 0.3em 0;
-	    	font-size: 90px;
-	    	opacity: 0.7;
-	    	text-shadow: 0px 3px 4px rgba(1, 17, 28, 1); 
-	    }
+	  		background: rgba(22,32,84,0.75);
+	  		position: absolute;
+	  		width: 100%;
+	  		left: 0;
+	  		bottom: 0;
+	  	}
+	  	ul{
+	  		list-style: none;
+	  		margin: 0;
+	  		padding: 0;
+	  	}
   	</style>
-</current>
+</other-days>

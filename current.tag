@@ -28,7 +28,7 @@
 	<script>
 		var self = this;
 	  	getCurrentWeather = function() {
-	    	fetch('//api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&units=metric&appid=fdd0e62073750d3d83317adbdc2b2230')
+	    	fetch('https://api.openweathermap.org/data/2.5/weather?q=Ulaanbaatar&units=metric&appid=fdd0e62073750d3d83317adbdc2b2230')
 	    	.then(function(res) {
 	        	return res.json();
 	      	})
@@ -45,7 +45,7 @@
 
 		     		var prefix = 'wi wi-';
 				  	var code = data.weather[0].id;
-				  	self.iconWi = weatherIcons[code].icon;
+				  	self.iconWi = weatherIcons['en'][code].icon;
 
 				  	// If we are not in the ranges mentioned above, add a day/night prefix.
 				  	if (!(code > 699 && code < 800) && !(code > 899 && code < 1000)) {
@@ -63,6 +63,10 @@
 		})
 	</script>
   	<style>
+	    :scope {
+	    	padding: 0 17px;
+	    	display: block;
+	    }
 	    .text-right{
 	    	text-align: right;
 	    	opacity: .8;
